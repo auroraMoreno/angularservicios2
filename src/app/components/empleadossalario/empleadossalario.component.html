@@ -1,0 +1,23 @@
+<h1>Buscar Api Empleados</h1>
+<form #salariosForm="ngForm">
+    <label>Introduzca salario</label>
+    <input type="number" class="form-control"
+    #cajaSalario name="cajasalario"/>
+    <button (click)="buscarEmpleados()">Buscar empleado</button>
+</form>
+<div *ngIf="empleados.length > 0">
+    <table>
+        <thead>
+            <tr>
+                <th>Apellido</th>
+                <th>Salario</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.salario}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

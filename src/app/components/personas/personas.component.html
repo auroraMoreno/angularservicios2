@@ -1,0 +1,13 @@
+<h1>Servicio HTTP personas</h1>
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Email</th>
+        <th>Edad</th>
+    </tr>
+    <tr *ngFor="let p of personas">
+        <td>{{p.Nombre}}</td>
+        <td>{{p.Email}}</td>
+        <td>{{p.Edad}}</td>
+    </tr>
+</table>
