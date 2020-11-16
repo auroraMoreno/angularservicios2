@@ -8,6 +8,7 @@ import { PersonasComponent } from './components/personas/personas.component';
 import { CochesComponent } from './components/coches/coches.component';
 import {FormsModule} from '@angular/forms';
 import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
+import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { EmpleadossalarioComponent } from './components/empleadossalario/emplead
     PersonakeComponent,
     PersonasComponent,
     CochesComponent,
-    EmpleadossalarioComponent
+    EmpleadossalarioComponent,
+    EmpleadosoficioComponent
   ],
   imports: [
     BrowserModule, HttpClientModule,FormsModule

@@ -1,0 +1,29 @@
+<h1>Empleados por oficio</h1>
+<form #oficiosForms>
+    <select #selectOficio name="selectOficio" (change)="buscarEmpleados()">
+        <option *ngFor="let o of empleadosOficios">{{o}}</option>
+   </select>
+</form>
+<div *ngIf="empleados.length > 0">
+    <table>
+        <thead>
+            <tr>
+                <th> Id Empleado</th>
+                <th>Apellido</th>
+                <th>Oficio</th>
+                <th>Salario</th>
+                <th>Departamento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of empleados">
+                <td>{{emp.idEmpleado}}</td>
+                <td>{{emp.apellido}}</td>
+                <td>{{emp.oficio}}</td>
+                <td>{{emp.salario}}</td>
+                <td>{{emp.departamento}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
