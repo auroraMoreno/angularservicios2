@@ -9,7 +9,9 @@ import { CochesComponent } from './components/coches/coches.component';
 import {FormsModule} from '@angular/forms';
 import { EmpleadossalarioComponent } from './components/empleadossalario/empleadossalario.component';
 import { EmpleadosoficioComponent } from './components/empleadosoficio/empleadosoficio.component';
-
+import {routing, appRoutingProvider} from './app.routing';
+import { DetallesempleadosComponent } from './components/detallesempleados/detallesempleados.component';
+import { TablaempleadosComponent } from './components/tablaempleados/tablaempleados.component';
 
 @NgModule({
   declarations: [
@@ -18,12 +20,14 @@ import { EmpleadosoficioComponent } from './components/empleadosoficio/empleados
     PersonasComponent,
     CochesComponent,
     EmpleadossalarioComponent,
-    EmpleadosoficioComponent
+    EmpleadosoficioComponent,
+    DetallesempleadosComponent,
+    TablaempleadosComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule,FormsModule
+    BrowserModule, HttpClientModule,FormsModule, routing
   ],
-  providers: [],
+  providers: [appRoutingProvider],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
